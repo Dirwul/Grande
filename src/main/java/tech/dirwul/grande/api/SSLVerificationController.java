@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
+
 @RestController
 public class SSLVerificationController {
 
@@ -22,7 +23,6 @@ public class SSLVerificationController {
 		ByteArrayResource byteArrayResource = new ByteArrayResource(contentBytes);
 
 		return ResponseEntity.ok()
-			.contentType(MediaType.parseMediaType("application/octet-stream"))
 			.contentLength(contentBytes.length)
 			.contentType(MediaType.TEXT_PLAIN)
 			.body(byteArrayResource);
