@@ -23,8 +23,6 @@ public class SSLVerificationController {
 		ByteArrayResource byteArrayResource = new ByteArrayResource(contentBytes);
 
 		return ResponseEntity.ok()
-			.contentLength(contentBytes.length)
-			.contentType(MediaType.TEXT_PLAIN)
 			.body(byteArrayResource);
 	}
 
