@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.nio.file.Files;
 
 @RestController
 public class SSLVerificationController {
@@ -19,7 +18,7 @@ public class SSLVerificationController {
 	@GetMapping(VALIDATION_PATH)
 	public ResponseEntity<ByteArrayResource> verify() throws IOException {
 		ClassPathResource resource = new ClassPathResource("static/" + VALIDATION_FILE_NAME);
-		byte[] contentBytes = Files.readAllBytes(resource.getFile().toPath());
+		byte[] contentBytes = resource.getInputStream().readAllBytes();
 		ByteArrayResource byteArrayResource = new ByteArrayResource(contentBytes);
 
 		return ResponseEntity.ok()
