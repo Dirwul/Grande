@@ -1,4 +1,4 @@
-package tech.dirwul.grande;
+package tech.dirwul.grande.api;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
