@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grande - 3D Artist & Lightning Artist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --kuromi-pink: #ff69b4;
+            --kuromi-purple: #9370db;
+            --kuromi-black: #2c2c2c;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        
+        body {
+            background-color: var(--kuromi-black);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--kuromi-purple), var(--kuromi-pink));
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+        }
+
+        .social-links {
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: var(--kuromi-pink);
+        }
+
+        .portfolio-section {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .section-title {
+            color: var(--kuromi-pink);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .display-3 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+        }
+
+        .lead {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+        }
+
+        footer {
+            background-color: rgba(0,0,0,0.8);
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+
+            .social-links a {
+                margin: 0 10px;
+            }
+
+            .portfolio-section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 mb-4">Grande</h1>
+            <p class="lead mb-5">3D Artist & Lightning Artist</p>
+            <div class="social-links">
+                <a href="https://t.me/SashaGromOW" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.artstation.com/sashagrom" target="_blank"><i class="fab fa-artstation"></i></a>
+                <a href="https://medal.tv/ru/u/GrandeOW" target="_blank"><i class="fas fa-gamepad"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="medal" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Medal.tv Highlights</h2>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">© 2025 Grande. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
